@@ -1,0 +1,9 @@
+Zemlja 1 365.25 
+Mars 1.524 249.2 
+Jupiter 5.203 4329 
+Neptun 30.06 60156 
+Pluton 0.250 55 
+Merkur 0.387 88 
+Venera 0.723 224.7 
+Saturn 9.539 10753 
+Uran 19.187 30686 
