@@ -5,7 +5,7 @@ using namespace std;
 
 int prastevilo(int stevilo);
 int vsota_prastevil();
-int povprecje_prastevil(int polje[20], int st);
+int povprecje_prastevil(int (&polje)[20], int st);
 
 int prastevilo(int stevilo){
     bool prastevilo = true;
@@ -34,7 +34,7 @@ int vsota_prastevil(){
 }
 
 
-int povprecje_prastevil(int polje[20], int st){
+int povprecje_prastevil(int (&polje)[20], int st){
 
 int stevec = 0;
 int povprecje = 0;
@@ -76,16 +76,20 @@ if (prastevilo(st1) == 0){
 }
 cout << "Povprecje prastevil je: " << povprecje_prastevil(seznam,st3) << endl;
 
+/*for(int i=0; i < 20; i++){
+    cout << seznam[i]<< endl;
+}*/
+
 cout << "Vnesite neko novo stevilo: ";
 cin >> neko_novo;
 
-povprecje_prastevil(seznam,neko_novo);
+//povprecje_prastevil(seznam,neko_novo);
 
 neko_novo = neko_novo * neko_novo;
 
 
-int naj_st = INT_MAX;
-int naj_st_razlika=0;
+int naj_st = 10000;
+int naj_st_razlika=10000;
 int racunanje;
 
 for (int i = 0; i <= 20; i++){
@@ -94,7 +98,7 @@ for (int i = 0; i <= 20; i++){
     }else{
         racunanje = seznam[i]-neko_novo;
     }
-    if(naj_st>racunanje){
+    if(naj_st_razlika>racunanje){
         naj_st_razlika = racunanje;
         naj_st = seznam[i];
     }
